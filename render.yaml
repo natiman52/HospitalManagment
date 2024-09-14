@@ -4,5 +4,5 @@ services:
     name: hospitalManagement
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn hospitalManagement.asgi:application -k uvicorn.workers.UvicornWorker"    
+    startCommand: "python -m gunicorn hospitalManagement.wsgi:application -k uvicorn.workers.UvicornWorker"    
   
