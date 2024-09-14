@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record Detail</title>
+  </head>
+  <style>
+    .header{
+        border-bottom: 3px double black;
+        padding-bottom: 1rem;
+    }
+    .col-md-6{
+        width: 50%;
+    }
+            *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+        }
+        .col{
+            flex-direction: column;
+        }
+        .dash-widget {background-color: #fff;border-radius: 4px;margin-bottom: 30px;padding: 20px;position: relative;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+       }
+        .record-detail-dash{
+        border-bottom: 3px double black;
+        padding-bottom: 0;
+        }
+        .row{ 
+        display:flex;
+        }
+        .justify-content-between{
+            justify-content: space-between;
+        }
+        .align-items-end{
+            align-items: end;
+        }
+        .record-detail-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.mt-5{
+    margin-top: 2.5rem;
+}
+.form-group{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.offset{
+    margin-right: 190pt;
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+.img-cont{
+    display: flex;
+    justify-content: end;
+}
+.h1{
+    font-size: x-large;
+    color: blue;
+}
+    </style>
+  <body>
+    <div>
+                <div class="header">
+                    <p class="h1">DataManagment</p>
+                    <p></p>
+                </div>
+
+            <div class='mt-5 row'>
+                <div id="main_info" class="w-50">
+                    <div>
+                        <div class='form-group'>
+                        <p>Full Name: <strong>{{record.firstname}} {{record.lastname}} {{record.grandname}}</strong></p>
+                        </div>
+                    </div>
+                    <div >
+                        <div class='form-group'>
+                        <p >Gender: <strong>{{record.sex}} </strong></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="second_content"></div>
+                        <div class='form-group'>
+                            <p >Age: <strong>{{record.age}}</strong></p>
+                            </div>
+                        </div>
+                        <div id="add_info">
+                            <div class='col-md-6 test p-0'>
+                                <div class='form-group'>
+                                <p>Phone: <strong>{{record.phone}}</strong></p>
+                                </div>
+                            </div>
+                            <div class='col-md-6 p-0'>
+                                <div class='form-group'>
+                                <p >Date of Birth: <strong>{{record.date_of_birth}}</strong></p>
+                                </div>
+                            </div>
+                            </div>
+                </div>
+                <div class="w-50 img-cont">
+                    <img class="img" src="{{record.pic}}" alt="test">
+                    </div>
+            </div>
+        <div id="footer">
+            <p id="align-end">PDF Export on Working Phase</p>
+            </div>
+        </div>
+        <style>
+            .img{
+                height: 200pt;
+                width: 200pt;
+                object-fit: cover;
+            }
+            #footer{
+                margin-top: 5rem;
+            }
+            #align-end{
+                text-align: center;
+                font-weight: 400;
+                font-size: small;
+                color: rgb(87, 87, 87);
+            }
+            </style>
+  </body>
+</html>

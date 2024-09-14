@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+        }
+        .col{
+            flex-direction: column;
+        }
+        .dash-widget {background-color: #fff;border-radius: 4px;margin-bottom: 30px;padding: 20px;position: relative;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+       }
+        .record-detail-dash{
+        border-bottom: 3px double black;
+        padding-bottom: 0;
+        }
+        .row{ 
+        display:flex;
+        }
+        .justify-content-between{
+            justify-content: space-between;
+        }
+        .align-items-end{
+            align-items: end;
+        }
+        .record-detail-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.mt-5{
+    margin-top: 2.5rem;
+}
+.form-group{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.h4,h3{
+    margin-top: 0.5rem;
+}
+.offset{
+
+    margin-right: 190pt;
+}
+    </style>
+</head>
+<body>
+    <div class='dash-widget mt-2 ml-4 mr-4 mb-1 record-detail-wrapper'>
+        <div class="mt-1 ml-3 mr-3 mb-1">
+            <div class="row justify-content-between align-items-end record-detail-dash">
+                <div class="record-detail-header ">
+                    <h2 class='h2'>DataManagment</h2>
+                    <p class='h4'>{{record.hospital.name}}</p>
+                </div>
+                <div class="record-detail-header ">
+                <p>{{record.date}}</p>
+                    <p>{{record.hospital.location}}</p>
+                </div>
+            </div>
+
+            <div class='mt-5'>
+                <div class='row '>
+                    <div class='col-md-6 offset p-0'>
+                        <div class='form-group'>
+                        <label class='bigger-font'>Full Name:</label>
+                        <p class='h4'>{{record.patient.firstname}} {{record.patient.lastname}} {{record.patient.grandname}}</p>
+                        </div>
+                    </div>
+                    <div class='col-md-6 p-0'>
+                        <div class='form-group'>
+                        <label class='bigger-font'>Gender:</label>
+                        <p class='h4'>{{record.patient.sex}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='row col'>
+                    <div class='form-group w-100'>
+                            <label class='bigger-font'>Age:</label>
+                            <p class='h4'>{{record.patient.age}}</p>
+                        </div>
+                    <div class='form-group w-100'>
+                            <label class='bigger-font'>Reason:</label>
+                            <p class='h5'>{{record.reason}}</p>
+                        </div>
+                    <div class='form-group w-100'>
+                        <label class='bigger-font'>Reccomendation:</label>
+                        {%if record.Recommandation != ""%}
+                        <p class='h5'>{{record.Recommandation}}</p>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+</body>
+</html>

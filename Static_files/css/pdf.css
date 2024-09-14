@@ -1,0 +1,56 @@
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+.record-detail-wrapper{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+.record-detail-wrapper *{
+color: black;
+}
+.record-detail-header p{
+margin: 0;
+}
+.record-detail-header h1,.record-detail-header h2{
+margin: 0;
+}
+.record-detail-header{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100%;
+}
+.record-detail-dash{
+border-bottom: 3px double black;
+padding: 1.5rem;
+}
+.h1 {
+font-size: 2.5rem;
+}
+
+h2, .h2 {
+font-size: 2rem;
+}
+
+.h3 {
+font-size: 1.75rem;
+}
+
+.h4 {
+font-size: 1.5rem;
+}
+
+.h5 {
+font-size: 1.25rem;
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }

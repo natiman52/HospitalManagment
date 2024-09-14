@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record Detail</title>
+  </head>
+  <style>
+    @page {
+        size: a4 landscape;
+        @frame header_frame {           /* Static Frame */
+            -pdf-frame-content: header_content;
+            left: 50pt;
+             width: 512pt;
+              top: 10pt;
+             height: 40pt;
+        }
+        @frame col1_frame {             /* Content frame 1 */
+            left: 44pt; width: 245pt; top: 50pt; height: 52pt;
+
+        }
+        @frame col2_frame {             /* Content frame 2 */
+            left: 523pt; width: 245pt; top: 61pt; height: 32pt;
+
+        }
+        @frame content_frame {
+            -pdf-frame-content: second_content;
+            left: 50pt;
+            width: 512pt;
+            top: 50pt;
+            height: 692pt;
+        }
+
+        @frame col4_frame {             /* Content frame 1 */
+            left: 44pt; width: 245pt; top: 110pt; height: 50pt;
+        }
+        @frame col3_frame {             /* Content frame 2 */
+            left: 323pt; width: 245pt; top: 110pt; height: 50pt;
+
+        }
+        @frame colaa_frame{
+            left:44pt;width:100%;top:160pt;height: 500pt;
+        }
+    }
+</style>
+  <body>
+    <div class='record-detail-wrapper'>
+        <div class="mt-1 ml-3 mr-3 mb-1">
+            <div class="wrapper recorddetaildash">
+                <div class="record-detail-header ">
+                    <p class='h2'>DataManagment</p>
+                    <p class='h4'>{{record.hospital.name}}</p>
+                </div>
+                <div class="record-detail-header ">
+                <p>{{record.date }}</p>
+                    <p>{{record.hospital.location}}</p>
+                </div>
+            </div>
+
+            <div class='mt-5'>
+                <div class='row'>
+                    <div id="header_content"></div>
+                    <div id="footer_content"></div>
+                    <div class='col-md-6 test p-0'>
+                        <div class='form-group'>
+                        <label class="h4">Full Name:</label>
+                        <p class='h4'>{{record.patient.firstname}} {{record.patient.lastname}} {{record.patient.grandname}}</p>
+                        </div>
+                    </div>
+                    <div class='col-md-6 p-0'>
+                        <div class='form-group'>
+                        <label class="h4">Gender:</label>
+                        <p class='h4'>{{record.patient.sex}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div id="second_content"></div>
+                    <div class='form-group w-100'>
+                            <label class="h4">Age:</label>
+                            <p class='h4'>{{record.patient.age}}</p>
+                        </div>
+                    <div class='form-group w-100'>
+                            <label class="h4">Reason</label>
+                            <p class='h4'>{{record.reason}}</p>
+                        </div>
+                        <div class='form-group w-100'>
+                            <label class="h4">Recommandation:</label>
+                            <p class='h4'>{{record.Recommandation}}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <p id="align-end">PDF Export on Working Phase</p>
+        </div>
+        <style>
+            #align-end{
+                text-align:center;
+            }
+            .record-detail-header{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100%;
+border-bottom-style:solid ;
+border-bottom-color:black ;
+border-bottom-width:3pt ;
+}</style>
+        <style>
+            .wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+.record-detail-wrapper{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+p{
+    margin-top: 0;
+}
+.record-detail-wrapper *{
+color: black;
+}
+.record-detail-header p{
+margin: 0;
+
+}
+.record-detail-header h1,.record-detail-header h2{
+margin: 0;
+}
+
+
+.h1 {
+font-size: 2.5rem;
+}
+
+h2, .h2 {
+font-size: 2rem;
+}
+
+.h3 {
+font-size: 1.75rem;
+}
+
+.h4 {
+font-size: 1.5rem;
+}
+
+.h5 {
+font-size: 1.25rem;
+}
+.row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+        </style>
+  </body>
+</html>
